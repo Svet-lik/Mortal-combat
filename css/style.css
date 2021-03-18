@@ -40,8 +40,7 @@ a {
   margin-right: 15px;
 }
 .app {
-  background: linear-gradient(90deg, #010202 -2.88%, rgba(1, 2, 2, 0.2) 44.9%),
-    url("../img/cover-image.jpg") no-repeat top right;
+  background: linear-gradient(90deg, #010202 0%, #010202 43%, rgba(1, 2, 2, 0.2) 90%);  
   min-height: 100vh;
   color: white;
 }
@@ -55,6 +54,7 @@ a {
 .tags {
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
   opacity: 0.4;
   font-size: 16px;
   line-height: 140%;
@@ -62,12 +62,7 @@ a {
 }
 .tags > * {
   margin-right: 15px;
-}
-.date {
-}
-.genre {
-}
-.country {
+  margin-bottom: 10px;
 }
 .age {
   border: 1px solid #ffffff;
@@ -96,11 +91,42 @@ a {
   background-color: #ea6e20;
   margin-right: 15px;
 }
-.button-default {
-}
-.button-icon {
-}
 .button-text {
   margin-left: 10px;
   vertical-align: text-bottom;
+}
+
+@media (max-width: 768px) {
+  .app {
+    height: auto;
+    padding-bottom: 400px;
+    background: url("../img/cover-image.jpg") no-repeat bottom center /300px;
+  }
+  video {
+    display: none;
+  }
+  .film {
+    padding-top: 2%;
+    height: auto;
+  }
+  .description {
+    font-size: 16px;
+    max-width: 333px;
+  }
+  .film-logo {
+    max-width: 100%;
+  }  
+}
+@media (max-width: 576px) {
+.button-text,
+.user-name {
+  display: none;
+}
+.app {
+  padding-bottom: 350px;
+  block-size: 300px;
+}
+.button {
+  margin-bottom: 10px;
+}
 }
