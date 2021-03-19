@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -24,32 +25,41 @@
           ><img src="img/avatar.jpg" alt="Аватар" class="user-photo"
         /></a>
       </header>
-      <section class="film">
-        <img src="img/film-logo.png" alt="Mortal Kombat" />
-        <div class="tags">
-          <span class="date">2021</span>
-          <span class="genre">боевик, фэнтези, фантастика</span>
-          <span class="country">США</span>
-          <span class="age">18+</span>
-        </div>
-        <!-- /.tags -->
-        <p class="description">
-          Продолжение легендарного фильма из 90-х. Предстоит по-настоящему
-          смертельная битва, где останется только сильнейший
-        </p>
-        <div class="button-group">
-          <button class="button button-primary">Предзаказ фильма</button>
-          <button class="button button-default">
-            <img
-              src="img/play.svg"
-              alt="icon: play"
-              class="button-icon"
-            /><span class="button-text">Смотреть трейлер</span>
-          </button>
-        </div>
-      </section>
+      <main>
+        <section class="film">
+          <img src="img/film-logo.png" alt="Mortal Kombat" />
+          <div class="tags">
+            <span class="date">2021</span>
+            <span class="genre">боевик, фэнтези, фантастика</span>
+            <span class="country">США</span>
+            <span class="age">18+</span>
+          </div>
+          <!-- /.tags -->
+          <p class="description">
+            Продолжение легендарного фильма из 90-х. Предстоит по-настоящему
+            смертельная битва, где останется только сильнейший
+          </p>
+          <div class="button-group">
+            <a data-fancybox data-touch="false" href="#pre-order" class="button button-primary">Предзаказ фильма</a>
+            <a data-fancybox href="https://www.youtube.com/watch?v=1ar_V1_uatA" class="button button-default">
+              <img
+                src="img/play.svg"
+                alt="icon: play"
+                class="button-icon"
+              /><span class="button-text">Смотреть трейлер</span>
+            </a>
+          </div>
+        </section>
+      </main>
+      <div class="modal__pre-order" id="pre-order">
+        <form action="#" method="post" class="modal">
+          <input type="email" class="modal-input"></input>
+          <button type="submit" class="button button-primary">Подписаться</button>
+        </form>
+      </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="js/jquery.vide.min.js"></script>
     <script src="js/main.js"></script>
   </body>
